@@ -4,9 +4,7 @@ Landing page (site de apresentação) da **Green Community**, uma app que
 transforma materiais reciclados em novas ideias. O site apresenta a app,
 explica como funciona e leva o visitante ao download.
 
-Feito com **HTML, CSS e JavaScript** puros (sem frameworks), pronto a publicar
-no [Vercel](https://vercel.com).
-
+Feito com **HTML, CSS e JavaScript** puros (sem frameworks).
 ---
 
 ## Demonstração
@@ -66,16 +64,6 @@ npx serve
 ```
 
 Depois abre `http://localhost:8000`.
-
-## Publicar no Vercel
-
-1. Envia este repositório para o GitHub.
-2. Em [vercel.com](https://vercel.com) → **Add New → Project** → importa o repositório.
-3. Deixa o *Root Directory* na raiz (predefinido).
-4. *Framework Preset*: **Other** → **Deploy**.
-
-> Nota: os botões **"Entrar"/"Criar conta"** apontam para `#entrar` (placeholder).
-> Quando a app estiver online, troca `#entrar` pelo URL real e volta a fazer push.
 
 ## Nota
 
