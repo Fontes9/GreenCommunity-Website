@@ -9,7 +9,7 @@ Feito com **HTML, CSS e JavaScript** puros (sem frameworks).
 
 ## Demonstração
 
-- Site online: `https://SEU-PROJETO.vercel.app` _(atualiza com o teu URL)_
+- Site online: `greencommunitywebsite.vercel.app`
 
 ## Páginas
 
