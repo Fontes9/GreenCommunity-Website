@@ -9,8 +9,8 @@ Feito com **HTML, CSS e JavaScript** puros (sem frameworks).
 
 ## Demonstração
 
-- Site online: `greencommunitywebsite.vercel.app`
-
+- [Site online](https://greencommunitywebsite.vercel.app/)
+  
 ## Páginas
 
 | Página | Ficheiro | Descrição |
