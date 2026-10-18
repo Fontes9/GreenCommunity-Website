@@ -1,0 +1,1148 @@
+/* ==========================================================================
+   GREEN COMMUNITY - FOLHA DE ESTILOS DO WEBSITE
+   --------------------------------------------------------------------------
+   Este ficheiro controla o aspeto de todas as paginas do site
+   (index.html, resume.html, download.html e contact.html).
+
+   Esta organizado por secoes, sempre pela mesma ordem:
+     1. Variaveis (cores, sombras, cantos...)
+     2. Base
+     3. Layout
+     4. Tipografia
+     5. Botoes
+     6. Barra de navegacao
+     7. Hero (topo da pagina)
+     8. Mockup do telemovel
+     9. Faixa de logos
+    10. Funcionalidades
+    11. Passos
+    12. Secao escura (showcase)
+    13. Numeros
+    14. CTA (chamada a acao)
+    15. Botoes das lojas
+    16. Cabecalho de subpaginas
+    17. Layout dividido (split / panel)
+    18. Linha do tempo
+    19. Contacto
+    20. Rodape
+    21. Animacoes
+    22. Responsivo (telemovel / tablet)
+   ========================================================================== */
+
+
+/* ==========================================================================
+   1. VARIAVEIS
+   Toda a paleta e medidas ficam aqui. Para mudar o tema, basta editar estes
+   valores em vez de procurar cores pelo ficheiro inteiro.
+   ========================================================================== */
+:root {
+    /* Cores de fundo e texto */
+    --bg: #f6faf7;          /* fundo geral do site */
+    --surface: #ffffff;     /* fundo de cartoes */
+    --ink: #0b1f16;         /* cor do texto principal */
+    --muted: #58706a;       /* texto secundario (cinza esverdeado) */
+    --line: #e2ede6;        /* cor das bordas finas */
+
+    /* Cor da marca (verde) em varias intensidades */
+    --brand: #16a34a;
+    --brand-2: #22c55e;
+    --brand-3: #86efac;
+    --brand-ink: #06331f;
+
+    /* Cor escura usada em secoes e rodape */
+    --dark: #072419;
+
+    /* Gradiente da marca (usado em botoes, logotipo, etc.) */
+    --grad: linear-gradient(135deg, #16a34a 0%, #22c55e 55%, #4ade80 100%);
+    --grad-soft: radial-gradient(60% 60% at 50% 0%, rgba(34, 197, 94, .22), transparent 70%);
+
+    /* Cantos arredondados */
+    --r-sm: 12px;
+    --r: 16px;
+    --r-lg: 24px;
+    --r-xl: 32px;
+    --pill: 999px;          /* canto totalmente redondo (formato pilula) */
+
+    /* Sombras */
+    --shadow-sm: 0 1px 2px rgba(7, 36, 25, .06), 0 2px 8px rgba(7, 36, 25, .05);
+    --shadow: 0 10px 30px rgba(7, 36, 25, .09);
+    --shadow-lg: 0 30px 70px rgba(7, 36, 25, .18);
+
+    /* Largura maxima do conteudo */
+    --maxw: 1140px;
+}
+
+
+/* ==========================================================================
+   2. BASE
+   ========================================================================== */
+
+/* Faz os elementos respeitarem sempre as larguras definidas */
+* {
+    box-sizing: border-box;
+}
+
+/* Scroll suave quando se clica numa ligacao com "#" */
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    font-family: "Plus Jakarta Sans", -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+    color: var(--ink);
+    background: var(--bg);
+    line-height: 1.6;                 /* espacamento entre linhas */
+    -webkit-font-smoothing: antialiased;
+    overflow-x: hidden;               /* evita scroll horizontal indesejado */
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+h1, h2, h3, h4 {
+    line-height: 1.1;
+    letter-spacing: -0.02em;          /* titulos ligeiramente mais "apertados" */
+    margin: 0 0 .4em;
+    font-weight: 800;
+}
+
+p {
+    margin: 0 0 1em;
+}
+
+
+/* ==========================================================================
+   3. LAYOUT
+   ========================================================================== */
+
+/* Caixa central que limita a largura do conteudo */
+.container {
+    width: 100%;
+    max-width: var(--maxw);
+    margin: 0 auto;
+    padding: 0 22px;
+}
+
+/* Espacamento vertical das secoes */
+.section {
+    padding: 96px 0;
+}
+
+.section-sm {
+    padding: 64px 0;
+}
+
+.mt-0 { margin-top: 0; }
+
+
+/* ==========================================================================
+   4. TIPOGRAFIA
+   ========================================================================== */
+
+/* Titulo principal (hero) - cresce conforme o tamanho do ecra */
+.display {
+    font-size: clamp(2.4rem, 6vw, 4.4rem);
+    font-weight: 800;
+    letter-spacing: -0.035em;
+}
+
+/* Titulo de seccao */
+.h2 {
+    font-size: clamp(1.9rem, 4vw, 2.9rem);
+}
+
+/* Titulo pequeno */
+.h3 {
+    font-size: 1.25rem;
+}
+
+/* Paragrafo de destaque (introducoes) */
+.lead {
+    font-size: clamp(1.05rem, 1.6vw, 1.22rem);
+    color: var(--muted);
+    max-width: 60ch;
+}
+
+/* Etiqueta pequena por cima dos titulos (ex: "Funcionalidades") */
+.eyebrow {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    font-size: .78rem;
+    font-weight: 700;
+    letter-spacing: .12em;
+    text-transform: uppercase;
+    color: var(--brand);
+    background: rgba(34, 197, 94, .1);
+    border: 1px solid rgba(34, 197, 94, .22);
+    padding: 7px 14px;
+    border-radius: var(--pill);
+    margin-bottom: 20px;
+}
+
+/* Pequeno ponto dentro da etiqueta */
+.eyebrow .dot {
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background: var(--brand-2);
+}
+
+/* Cabecalho de cada seccao (etiqueta + titulo + texto) */
+.section-head {
+    max-width: 720px;
+    margin: 0 auto 56px;
+    text-align: center;
+}
+
+.section-head .lead {
+    margin: 0 auto;
+}
+
+
+/* ==========================================================================
+   5. BOTOES
+   Base comum a todos os botoes; as variantes mudam apenas as cores.
+   ========================================================================== */
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    font-weight: 700;
+    font-size: .98rem;
+    padding: 13px 24px;
+    border-radius: var(--pill);
+    border: 1px solid transparent;
+    cursor: pointer;
+    transition: transform .18s ease, box-shadow .18s ease,
+                background .18s ease, color .18s ease, border-color .18s ease;
+    white-space: nowrap;
+    font-family: inherit;
+}
+
+.btn svg { width: 18px; height: 18px; }
+
+/* Botao verde principal */
+.btn-primary {
+    background: var(--grad);
+    color: #fff;
+    box-shadow: 0 12px 26px rgba(22, 163, 74, .32);
+}
+.btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 18px 34px rgba(22, 163, 74, .4);
+}
+
+/* Botao escuro */
+.btn-dark {
+    background: var(--dark);
+    color: #fff;
+}
+.btn-dark:hover { transform: translateY(-2px); background: #0b3324; }
+
+/* Botao com contorno (fundo transparente) */
+.btn-ghost {
+    background: transparent;
+    color: var(--ink);
+    border-color: var(--line);
+}
+.btn-ghost:hover {
+    border-color: var(--brand-2);
+    color: var(--brand);
+    background: #fff;
+}
+
+/* Botao branco (usado sobre fundos coloridos) */
+.btn-light {
+    background: #fff;
+    color: var(--brand-ink);
+    box-shadow: var(--shadow-sm);
+}
+.btn-light:hover { transform: translateY(-2px); box-shadow: var(--shadow); }
+
+/* Tamanhos / largura */
+.btn-lg { padding: 16px 30px; font-size: 1.05rem; }
+.btn-block { width: 100%; }
+
+
+/* ==========================================================================
+   6. BARRA DE NAVEGACAO
+   Fica "colada" ao topo (sticky). Ao fazer scroll ganha sombra via JS.
+   ========================================================================== */
+.nav {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background: rgba(246, 250, 247, .78);
+    backdrop-filter: blur(14px);           /* efeito de vidro fosco */
+    -webkit-backdrop-filter: blur(14px);
+    border-bottom: 1px solid transparent;
+    transition: border-color .25s ease, background .25s ease, box-shadow .25s ease;
+}
+
+/* Estado quando a pagina tem scroll */
+.nav.scrolled {
+    border-bottom-color: var(--line);
+    background: rgba(255, 255, 255, .86);
+    box-shadow: 0 6px 24px rgba(7, 36, 25, .06);
+}
+
+.nav-inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 72px;
+    gap: 20px;
+}
+
+/* Logotipo + nome da marca */
+.brand {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-weight: 800;
+    font-size: 1.12rem;
+    letter-spacing: -0.02em;
+}
+
+.brand b { color: var(--brand); font-weight: 800; }
+
+.brand-mark {
+    display: grid;
+    place-items: center;
+    width: 38px;
+    height: 38px;
+    border-radius: 12px;
+    background: var(--grad);
+    box-shadow: 0 8px 18px rgba(22, 163, 74, .35);
+}
+
+.brand-mark svg { width: 22px; height: 22px; color: #fff; }
+
+/* Ligacoes do menu */
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.nav-links a {
+    padding: 9px 14px;
+    border-radius: var(--pill);
+    font-size: .94rem;
+    font-weight: 600;
+    color: #2a443b;
+    transition: background .18s ease, color .18s ease;
+}
+
+.nav-links a:hover { background: rgba(34, 197, 94, .1); color: var(--brand); }
+
+/* Zona direita da barra (botoes) */
+.nav-actions {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+/* Botao de menu (hamburguer) - so aparece em ecras pequenos */
+.nav-toggle {
+    display: none;
+    width: 44px;
+    height: 44px;
+    border: 1px solid var(--line);
+    background: #fff;
+    border-radius: 12px;
+    cursor: pointer;
+    position: relative;
+}
+
+/* As 3 barrinhas do botao */
+.nav-toggle span,
+.nav-toggle span::before,
+.nav-toggle span::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 18px;
+    height: 2px;
+    background: var(--ink);
+    border-radius: 2px;
+    transition: .2s ease;
+}
+.nav-toggle span { top: 21px; }
+.nav-toggle span::before { top: -6px; }
+.nav-toggle span::after { top: 6px; }
+
+
+/* ==========================================================================
+   7. HERO (topo da pagina)
+   ========================================================================== */
+.hero {
+    position: relative;
+    padding: 90px 0 80px;
+    overflow: hidden;
+}
+
+/* Brilho verde suave no fundo */
+.hero::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: var(--grad-soft);
+    pointer-events: none;
+}
+
+/* Grelha quadriculada leve no fundo (desvanecida para baixo) */
+.hero::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-image: linear-gradient(var(--line) 1px, transparent 1px),
+                      linear-gradient(90deg, var(--line) 1px, transparent 1px);
+    background-size: 44px 44px;
+    -webkit-mask-image: radial-gradient(70% 55% at 50% 0%, #000 0%, transparent 78%);
+    mask-image: radial-gradient(70% 55% at 50% 0%, #000 0%, transparent 78%);
+    opacity: .5;
+    pointer-events: none;
+}
+
+/* Duas colunas: texto a esquerda, telemovel a direita */
+.hero-grid {
+    position: relative;
+    z-index: 1;
+    display: grid;
+    grid-template-columns: 1.05fr .95fr;
+    gap: 56px;
+    align-items: center;
+}
+
+.hero-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 14px;
+    margin: 30px 0 26px;
+}
+
+/* Linha com avatares + legenda */
+.hero-note {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: var(--muted);
+    font-size: .9rem;
+}
+
+.avatars {
+    display: flex;
+}
+.avatars span {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    border: 2px solid var(--bg);
+    margin-left: -10px;                 /* sobrepoe ligeiramente os circulos */
+    background: var(--grad);
+}
+.avatars span:first-child { margin-left: 0; }
+.avatars span:nth-child(2) { background: linear-gradient(135deg, #0ea5a3, #22c55e); }
+.avatars span:nth-child(3) { background: linear-gradient(135deg, #16a34a, #86efac); }
+.avatars span:nth-child(4) { background: linear-gradient(135deg, #0b3324, #22c55e); }
+
+.hero-stats {
+    display: flex;
+    gap: 30px;
+    margin-top: 34px;
+    flex-wrap: wrap;
+}
+
+/* Um numero + legenda (reutilizado no hero e na faixa de numeros) */
+.stat b {
+    display: block;
+    font-size: 1.7rem;
+    font-weight: 800;
+    letter-spacing: -0.03em;
+}
+.stat span {
+    font-size: .86rem;
+    color: var(--muted);
+}
+
+
+/* ==========================================================================
+   8. MOCKUP DO TELEMOVEL
+   Simula a app dentro de um telemovel, apenas com CSS.
+   ========================================================================== */
+.phone-wrap {
+    display: flex;
+    justify-content: center;
+    position: relative;
+}
+
+/* Circulo verde desfocado por tras do telemovel */
+.phone-wrap::before {
+    content: "";
+    position: absolute;
+    width: 340px;
+    height: 340px;
+    border-radius: 50%;
+    background: var(--grad);
+    filter: blur(70px);
+    opacity: .35;
+    top: 10%;
+}
+
+/* Corpo do telemovel */
+.phone {
+    position: relative;
+    width: 300px;
+    height: 610px;
+    background: #0b1f16;
+    border-radius: 44px;
+    padding: 12px;
+    box-shadow: var(--shadow-lg), 0 0 0 8px rgba(11, 31, 22, .06);
+    animation: float 6s ease-in-out infinite;   /* flutuacao suave */
+}
+
+/* Animacao de flutuar */
+@keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-14px); }
+}
+
+/* "Notch" (entalhe) no topo do telemovel */
+.phone-notch {
+    position: absolute;
+    top: 14px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 120px;
+    height: 24px;
+    background: #0b1f16;
+    border-radius: var(--pill);
+    z-index: 3;
+}
+
+/* Ecrã interior do telemovel */
+.phone-screen {
+    width: 100%;
+    height: 100%;
+    background: #f1f7f2;
+    border-radius: 34px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    padding: 34px 14px 12px;
+}
+
+/* Cabecalho da mini-app */
+.app-top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 12px;
+}
+
+.app-brand {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-weight: 800;
+    font-size: .82rem;
+    color: var(--brand-ink);
+}
+
+.app-logo {
+    width: 20px;
+    height: 20px;
+    border-radius: 7px;
+    background: var(--grad);
+}
+
+.app-avatar {
+    width: 26px;
+    height: 26px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #0ea5a3, #22c55e);
+}
+
+/* Cartao de publicacao dentro da mini-app */
+.app-card {
+    background: #fff;
+    border-radius: 16px;
+    padding: 11px;
+    box-shadow: var(--shadow-sm);
+    margin-bottom: 11px;
+}
+
+.app-row {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 8px;
+}
+.app-row b { font-size: .74rem; display: block; line-height: 1.1; }
+.app-row span { font-size: .62rem; color: #94a3a8; }
+
+/* Variacoes de avatar e imagem (para darem cores diferentes) */
+.app-avatar.sm { width: 22px; height: 22px; }
+.app-avatar.a2 { background: linear-gradient(135deg, #16a34a, #86efac); }
+.app-avatar.a3 { background: linear-gradient(135deg, #0b3324, #4ade80); }
+
+.app-media {
+    height: 96px;
+    border-radius: 12px;
+    background: linear-gradient(135deg, #bbf7d0, #86efac);
+    margin-bottom: 8px;
+}
+.app-media.alt { background: linear-gradient(135deg, #cffafe, #bbf7d0); }
+
+.app-text { font-size: .72rem; color: #33463f; margin-bottom: 7px; }
+
+.app-actions {
+    display: flex;
+    gap: 14px;
+    font-size: .68rem;
+    font-weight: 700;
+    color: var(--brand);
+}
+
+/* Barra inferior da mini-app (navegacao) */
+.app-nav {
+    margin-top: auto;
+    display: flex;
+    justify-content: space-around;
+    padding: 10px 6px;
+    background: #fff;
+    border-radius: 18px;
+    box-shadow: var(--shadow-sm);
+}
+.app-nav svg { width: 20px; height: 20px; color: #9db3ab; }
+.app-nav .active svg { color: var(--brand); }
+
+
+/* ==========================================================================
+   9. FAIXA DE LOGOS / ENTIDADES
+   ========================================================================== */
+.logos {
+    padding: 26px 0;
+    border-top: 1px solid var(--line);
+    border-bottom: 1px solid var(--line);
+    background: #fff;
+}
+
+.logos-inner {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 14px 44px;
+    color: #8ba79c;
+    font-weight: 700;
+    letter-spacing: .04em;
+}
+.logos-inner span { font-size: .95rem; opacity: .85; }
+
+
+/* ==========================================================================
+   10. FUNCIONALIDADES (cartoes em grelha)
+   ========================================================================== */
+.features-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 22px;
+}
+
+.feature-card {
+    background: var(--surface);
+    border: 1px solid var(--line);
+    border-radius: var(--r-lg);
+    padding: 28px;
+    transition: transform .2s ease, box-shadow .2s ease, border-color .2s ease;
+}
+.feature-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow);
+    border-color: rgba(34, 197, 94, .35);
+}
+
+/* Quadrado com o icone no topo do cartao */
+.icon-badge {
+    display: grid;
+    place-items: center;
+    width: 52px;
+    height: 52px;
+    border-radius: 15px;
+    background: rgba(34, 197, 94, .12);
+    color: var(--brand);
+    margin-bottom: 18px;
+}
+.icon-badge svg { width: 26px; height: 26px; }
+
+.feature-card h3 { font-size: 1.16rem; margin-bottom: .4em; }
+.feature-card p { color: var(--muted); margin: 0; font-size: .96rem; }
+
+
+/* ==========================================================================
+   11. PASSOS ("Como funciona")
+   ========================================================================== */
+.steps {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 22px;
+}
+
+.step {
+    background: #fff;
+    border: 1px solid var(--line);
+    border-radius: var(--r-lg);
+    padding: 30px 26px;
+}
+
+/* Circulo com o numero do passo */
+.step-num {
+    display: grid;
+    place-items: center;
+    width: 46px;
+    height: 46px;
+    border-radius: 50%;
+    background: var(--dark);
+    color: #fff;
+    font-weight: 800;
+    margin-bottom: 16px;
+    font-size: 1.05rem;
+}
+
+.step h3 { font-size: 1.15rem; }
+.step p { color: var(--muted); margin: 0; font-size: .96rem; }
+
+
+/* ==========================================================================
+   12. SECAO ESCURA (SHOWCASE)
+   Bloco verde-escuro com destaque da app.
+   ========================================================================== */
+.showcase {
+    background: var(--dark);
+    color: #eaf6ee;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Brilho verde desfocado no canto */
+.showcase::before {
+    content: "";
+    position: absolute;
+    width: 600px;
+    height: 600px;
+    border-radius: 50%;
+    background: var(--grad);
+    filter: blur(120px);
+    opacity: .22;
+    top: -200px;
+    right: -150px;
+}
+
+/* Etiqueta adaptada ao fundo escuro */
+.showcase .eyebrow {
+    color: var(--brand-3);
+    background: rgba(134, 239, 172, .12);
+    border-color: rgba(134, 239, 172, .25);
+}
+
+.showcase h2 { color: #fff; }
+
+.showcase-grid {
+    position: relative;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    align-items: center;
+}
+
+/* Lista com visto (check) + titulo + texto */
+.feature-list {
+    list-style: none;
+    padding: 0;
+    margin: 26px 0 0;
+    display: grid;
+    gap: 18px;
+}
+.feature-list li {
+    display: flex;
+    gap: 14px;
+    align-items: flex-start;
+}
+.feature-list .check {
+    flex: none;
+    display: grid;
+    place-items: center;
+    width: 26px;
+    height: 26px;
+    border-radius: 50%;
+    background: rgba(34, 197, 94, .14);
+    color: var(--brand);
+    margin-top: 2px;
+}
+.feature-list .check svg { width: 15px; height: 15px; }
+.feature-list b { display: block; }
+.feature-list p { color: var(--muted); margin: 2px 0 0; font-size: .92rem; }
+
+/* Contraste da lista quando esta sobre fundo escuro */
+.showcase .feature-list .check { background: rgba(34, 197, 94, .2); color: var(--brand-3); }
+.showcase .feature-list b { color: #fff; }
+.showcase .feature-list p { color: #a9c4ba; }
+
+/* Texto secundario claro (para fundos escuros) */
+.muted-dark { color: #a9c4ba; }
+
+
+/* ==========================================================================
+   13. NUMEROS (faixa com estatisticas)
+   ========================================================================== */
+.stats-band {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    text-align: center;
+}
+.stats-band .stat b {
+    font-size: clamp(2rem, 4vw, 2.8rem);
+    color: var(--brand);
+}
+
+
+/* ==========================================================================
+   14. CTA (CHAMADA A ACAO)
+   ========================================================================== */
+.cta-band {
+    position: relative;
+    background: var(--grad);
+    border-radius: var(--r-xl);
+    padding: 64px 40px;
+    text-align: center;
+    color: #fff;
+    overflow: hidden;
+    box-shadow: var(--shadow-lg);
+}
+
+/* Padrao de pontos claro por cima do gradiente */
+.cta-band::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-image: radial-gradient(rgba(255, 255, 255, .35) 1px, transparent 1px);
+    background-size: 22px 22px;
+    opacity: .35;
+}
+.cta-band > * { position: relative; }   /* conteudo por cima do padrao */
+
+.cta-band h2 { color: #fff; }
+.cta-band .lead { color: rgba(255, 255, 255, .9); margin-inline: auto; }
+
+.cta-actions {
+    display: flex;
+    gap: 14px;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 28px;
+}
+
+
+/* ==========================================================================
+   15. BOTOES DAS LOJAS (App Store / Google Play)
+   ========================================================================== */
+.store-buttons {
+    display: flex;
+    gap: 14px;
+    flex-wrap: wrap;
+}
+
+.store-btn {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    background: var(--dark);
+    color: #fff;
+    padding: 12px 20px;
+    border-radius: 14px;
+    transition: transform .18s ease, box-shadow .18s ease;
+    min-width: 168px;
+}
+.store-btn:hover { transform: translateY(-2px); box-shadow: var(--shadow); }
+.store-btn svg { width: 26px; height: 26px; flex: none; }
+.store-btn small { display: block; font-size: .68rem; opacity: .75; letter-spacing: .04em; }
+.store-btn b { font-size: .98rem; font-weight: 700; }
+
+
+/* ==========================================================================
+   16. CABECALHO DE SUBPAGINAS (Sobre, Download, Contacto)
+   ========================================================================== */
+.page-hero {
+    padding: 70px 0 40px;
+    text-align: center;
+    background: var(--grad-soft);
+}
+.page-hero .lead { margin: 0 auto; }
+
+
+/* ==========================================================================
+   17. LAYOUT DIVIDIDO (split / panel)
+   Duas colunas: conteudo + caixa destacada.
+   ========================================================================== */
+.split {
+    display: grid;
+    grid-template-columns: 1.05fr .95fr;
+    gap: 56px;
+    align-items: center;
+}
+
+.panel {
+    background: #fff;
+    border: 1px solid var(--line);
+    border-radius: var(--r-xl);
+    padding: 36px;
+    box-shadow: var(--shadow-sm);
+}
+
+
+/* ==========================================================================
+   18. LINHA DO TEMPO (pagina Sobre)
+   ========================================================================== */
+.timeline {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    border-left: 2px solid var(--line);    /* linha vertical */
+    display: grid;
+    gap: 30px;
+}
+
+.timeline li { position: relative; padding-left: 30px; }
+
+/* Circulo em cada ponto da linha do tempo */
+.timeline li::before {
+    content: "";
+    position: absolute;
+    left: -9px;
+    top: 4px;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    background: var(--grad);
+    box-shadow: 0 0 0 5px rgba(34, 197, 94, .15);
+}
+
+.timeline b { display: block; }
+
+
+/* ==========================================================================
+   19. CONTACTO
+   ========================================================================== */
+.contact-grid {
+    display: grid;
+    grid-template-columns: 1.1fr .9fr;
+    gap: 40px;
+    align-items: start;
+}
+
+/* Cada campo do formulario (label + input) */
+.field { margin-bottom: 18px; }
+.field label {
+    display: block;
+    font-size: .86rem;
+    font-weight: 700;
+    margin-bottom: 7px;
+    color: #2a443b;
+}
+.field input,
+.field textarea,
+.field select {
+    width: 100%;
+    padding: 13px 15px;
+    border: 1px solid var(--line);
+    border-radius: var(--r-sm);
+    font-family: inherit;
+    font-size: .98rem;
+    background: #fbfdfb;
+    transition: border-color .18s ease, box-shadow .18s ease, background .18s ease;
+}
+.field textarea { resize: vertical; min-height: 130px; }
+
+/* Destaque quando o campo esta selecionado */
+.field input:focus,
+.field textarea:focus,
+.field select:focus {
+    outline: none;
+    border-color: var(--brand-2);
+    background: #fff;
+    box-shadow: 0 0 0 4px rgba(34, 197, 94, .14);
+}
+
+/* Cartoes de informacao (email, telefone, etc.) */
+.contact-info {
+    display: grid;
+    gap: 16px;
+}
+.info-card {
+    display: flex;
+    gap: 14px;
+    align-items: flex-start;
+    background: #fff;
+    border: 1px solid var(--line);
+    border-radius: var(--r);
+    padding: 20px;
+}
+.info-card .icon-badge { margin: 0; flex: none; width: 46px; height: 46px; }
+.info-card b { display: block; }
+.info-card a, .info-card p { color: var(--muted); font-size: .94rem; margin: 2px 0 0; }
+.info-card a:hover { color: var(--brand); }
+
+/* Mapa */
+.map-frame {
+    border: 0;
+    width: 100%;
+    height: 300px;
+    border-radius: var(--r-lg);
+    box-shadow: var(--shadow-sm);
+    filter: saturate(1.05);
+}
+
+
+/* ==========================================================================
+   20. RODAPE
+   ========================================================================== */
+.footer {
+    background: var(--dark);
+    color: #b9cfc5;
+    padding: 66px 0 30px;
+}
+
+.footer-grid {
+    display: grid;
+    grid-template-columns: 1.6fr 1fr 1fr 1fr;   /* marca + 3 colunas */
+    gap: 40px;
+    padding-bottom: 40px;
+    border-bottom: 1px solid rgba(255, 255, 255, .1);
+}
+
+.footer .brand { color: #fff; }
+.footer p { font-size: .94rem; margin-top: 16px; max-width: 34ch; }
+
+.footer h4 {
+    color: #fff;
+    font-size: .82rem;
+    letter-spacing: .12em;
+    text-transform: uppercase;
+    margin-bottom: 16px;
+}
+
+.footer-col a {
+    display: block;
+    padding: 5px 0;
+    font-size: .94rem;
+    color: #b9cfc5;
+    transition: color .18s ease;
+}
+.footer-col a:hover { color: var(--brand-3); }
+
+.footer-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 12px;
+    padding-top: 26px;
+    font-size: .86rem;
+}
+
+/* Icones das redes sociais */
+.socials { display: flex; gap: 10px; }
+.socials a {
+    display: grid;
+    place-items: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 12px;
+    background: rgba(255, 255, 255, .07);
+    color: #d7e6de;
+    transition: background .18s ease, color .18s ease, transform .18s ease;
+}
+.socials a:hover { background: var(--brand); color: #fff; transform: translateY(-2px); }
+.socials svg { width: 18px; height: 18px; }
+
+
+/* ==========================================================================
+   21. ANIMACOES
+   Elementos com a classe .reveal comecam invisiveis e aparecem ao fazer
+   scroll (a classe .in e adicionada pelo JavaScript).
+   ========================================================================== */
+.reveal {
+    opacity: 0;
+    transform: translateY(22px);
+    transition: opacity .7s ease, transform .7s ease;
+}
+.reveal.in {
+    opacity: 1;
+    transform: none;
+}
+
+
+/* ==========================================================================
+   22. RESPONSIVO
+   Ajustes para tablet (ate 980px) e telemovel (ate 560px).
+   ========================================================================== */
+@media (max-width: 980px) {
+    /* O menu passa a painel que abre/fecha a partir do topo */
+    .nav-links {
+        position: fixed;
+        inset: 72px 0 auto 0;
+        flex-direction: column;
+        align-items: stretch;
+        gap: 4px;
+        background: #fff;
+        padding: 16px 22px 26px;
+        border-bottom: 1px solid var(--line);
+        box-shadow: var(--shadow);
+        transform: translateY(-130%);      /* escondido */
+        transition: transform .3s ease;
+    }
+    .nav-links.open { transform: translateY(0); }   /* visivel */
+    .nav-links a { padding: 13px 14px; }
+
+    /* Mostra o botao de menu e esconde o "Entrar" (fica no menu) */
+    .nav-toggle { display: block; }
+    .nav-actions .btn-ghost { display: none; }
+
+    /* Passa as grelhas de varias colunas para uma so coluna */
+    .hero-grid { grid-template-columns: 1fr; gap: 50px; }
+    .phone-wrap { order: -1; }              /* telemovel fica em cima */
+    .features-grid,
+    .steps,
+    .stats-band,
+    .showcase-grid,
+    .split,
+    .contact-grid { grid-template-columns: 1fr; }
+
+    .stats-band { grid-template-columns: repeat(2, 1fr); gap: 30px; }
+    .section { padding: 72px 0; }
+    .footer-grid { grid-template-columns: 1fr 1fr; }
+}
+
+@media (max-width: 560px) {
+    .section { padding: 60px 0; }
+    .hero-actions .btn { width: 100%; }
+    .store-buttons { width: 100%; }
+    .store-btn { flex: 1; }
+    .footer-grid { grid-template-columns: 1fr; }
+    .cta-band { padding: 48px 24px; }
+    .hero-stats { gap: 22px; }
+}

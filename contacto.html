@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<!-- Pagina "Contacto" - formulario e informacoes de contacto -->
+<html lang="pt">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Contacto — Green Community</title>
+    <meta name="description" content="Fala com a equipa da Green Community. Duvidas, parcerias com escolas ou suporte da app." />
+    <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    <link href="css/styles.css" rel="stylesheet" />
+</head>
+<body>
+
+    <header class="nav" id="nav">
+        <div class="container nav-inner">
+            <a class="brand" href="index.html">
+                <span class="brand-mark">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10Z"/><path d="M2 21c0-3 1.85-5.36 5.08-6"/></svg>
+                </span>
+                <span>Green<b>Community</b></span>
+            </a>
+            <nav class="nav-links" id="navLinks">
+                <a href="index.html#funcionalidades">Funcionalidades</a>
+                <a href="index.html#como">Como funciona</a>
+                <a href="sobre.html">Sobre</a>
+                <a href="contacto.html">Contacto</a>
+            </nav>
+            <div class="nav-actions">
+                <a class="btn btn-ghost" href="#entrar">Entrar</a>
+                <a class="btn btn-primary" href="transferir.html">Descarregar</a>
+                <button class="nav-toggle" id="navToggle" aria-label="Abrir menu"><span></span></button>
+            </div>
+        </div>
+    </header>
+
+    <section class="page-hero">
+        <div class="container">
+            <span class="eyebrow"><span class="dot"></span> Contacto</span>
+            <h1 class="display">Fala connosco</h1>
+            <p class="lead">Tens uma duvida, uma ideia ou queres levar a Green Community para a tua escola? Envia-nos uma mensagem.</p>
+        </div>
+    </section>
+
+    <section class="section">
+        <div class="container contact-grid">
+            <div class="panel reveal">
+                <h2 class="h3">Envia uma mensagem</h2>
+                <form action="mailto:geral@greencommunity.pt" method="post" enctype="text/plain">
+                    <div class="field">
+                        <label for="name">Nome</label>
+                        <input id="name" name="Nome" type="text" placeholder="O teu nome" required />
+                    </div>
+                    <div class="field">
+                        <label for="email">Email</label>
+                        <input id="email" name="Email" type="email" placeholder="nome@exemplo.com" required />
+                    </div>
+                    <div class="field">
+                        <label for="subject">Assunto</label>
+                        <select id="subject" name="Assunto">
+                            <option>Duvida sobre a app</option>
+                            <option>Parceria com escola</option>
+                            <option>Suporte tecnico</option>
+                            <option>Outro</option>
+                        </select>
+                    </div>
+                    <div class="field">
+                        <label for="message">Mensagem</label>
+                        <textarea id="message" name="Mensagem" placeholder="Escreve aqui a tua mensagem..." required></textarea>
+                    </div>
+                    <button class="btn btn-primary btn-lg btn-block" type="submit">Enviar mensagem</button>
+                </form>
+            </div>
+
+            <div class="contact-info reveal">
+                <div class="info-card">
+                    <div class="icon-badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="3"/><path d="m2 7 10 6 10-6"/></svg></div>
+                    <div>
+                        <b>Email</b>
+                        <a href="mailto:geral@greencommunity.pt">geral@greencommunity.pt</a>
+                    </div>
+                </div>
+                <div class="info-card">
+                    <div class="icon-badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2 4.2 2 2 0 0 1 4 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8.1 9.7a16 16 0 0 0 6 6l1.2-1.2a2 2 0 0 1 2.1-.5c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></svg></div>
+                    <div>
+                        <b>Telefone</b>
+                        <a href="tel:+351255000000">+351 255 000 000</a>
+                    </div>
+                </div>
+                <div class="info-card">
+                    <div class="icon-badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0z"/><circle cx="12" cy="10" r="3"/></svg></div>
+                    <div>
+                        <b>Onde estamos</b>
+                        <p>Escola Secundaria Camilo Castelo Branco</p>
+                    </div>
+                </div>
+                <div class="info-card">
+                    <div class="icon-badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg></div>
+                    <div>
+                        <b>Horario</b>
+                        <p>Segunda a sexta, 9h - 18h</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section-sm">
+        <div class="container reveal">
+            <iframe class="map-frame" loading="lazy" allowfullscreen
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2992.618349773973!2d-8.524467924536925!3d41.404093971297705!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd2458f8b98d6a9b%3A0x68c68d0d51ee99ed!2sEscola%20Secund%C3%A1ria%20Camilo%20Castelo%20Branco!5e0!3m2!1spt-PT!2spt!4v1682626975665!5m2!1spt-PT!2spt"></iframe>
+        </div>
+    </section>
+
+    <section class="section-sm">
+        <div class="container">
+            <div class="cta-band reveal">
+                <h2 class="h2">Prefere experimentar primeiro?</h2>
+                <p class="lead">Descarrega a app gratis e ve por ti porque tantas pessoas ja criam com a Green Community.</p>
+                <div class="cta-actions">
+                    <a class="btn btn-light btn-lg" href="transferir.html">Descarregar a app</a>
+                    <a class="btn btn-dark btn-lg" href="#entrar">Criar conta</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div>
+                    <a class="brand" href="index.html">
+                        <span class="brand-mark">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10Z"/><path d="M2 21c0-3 1.85-5.36 5.08-6"/></svg>
+                        </span>
+                        <span>Green<b>Community</b></span>
+                    </a>
+                    <p>A app que transforma materiais reciclados em ideias incriveis. Cria, partilha e aprende a reciclar.</p>
+                    <div class="socials">
+                        <a href="#" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></svg></a>
+                        <a href="#" aria-label="Facebook"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg></a>
+                        <a href="#" aria-label="YouTube"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="5" width="20" height="14" rx="4"/><path d="m10 9 5 3-5 3z" fill="currentColor" stroke="none"/></svg></a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h4>App</h4>
+                    <a href="index.html#funcionalidades">Funcionalidades</a>
+                    <a href="transferir.html">Download</a>
+                </div>
+                <div class="footer-col">
+                    <h4>Empresa</h4>
+                    <a href="sobre.html">Sobre</a>
+                    <a href="contacto.html">Contacto</a>
+                    <a href="#entrar">Entrar</a>
+                </div>
+                <div class="footer-col">
+                    <h4>Legal</h4>
+                    <a href="#">Termos</a>
+                    <a href="#">Privacidade</a>
+                    <a href="#">Cookies</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <span>&copy; <span data-year>2026</span> Green Community. Projeto PAP.</span>
+                <span>Feito com materiais reciclados (e muito codigo).</span>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/scripts.js"></script>
+</body>
+</html>

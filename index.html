@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<!-- Pagina inicial - apresenta a app e leva o visitante ao download -->
+<html lang="pt">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Green Community — A app que transforma reciclagem em criatividade</title>
+    <meta name="description" content="Green Community e a app que transforma materiais reciclados em novas ideias. Cria, partilha e aprende a reciclar. Disponível para Android e iOS." />
+    <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    <link href="css/styles.css" rel="stylesheet" />
+</head>
+<body>
+
+    <!-- ============ NAV ============ -->
+    <header class="nav" id="nav">
+        <div class="container nav-inner">
+            <a class="brand" href="index.html">
+                <span class="brand-mark">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10Z"/><path d="M2 21c0-3 1.85-5.36 5.08-6"/></svg>
+                </span>
+                <span>Green<b>Community</b></span>
+            </a>
+
+            <nav class="nav-links" id="navLinks">
+                <a href="index.html#funcionalidades">Funcionalidades</a>
+                <a href="index.html#como">Como funciona</a>
+                <a href="sobre.html">Sobre</a>
+                <a href="contacto.html">Contacto</a>
+            </nav>
+
+            <div class="nav-actions">
+                <a class="btn btn-ghost" href="#entrar">Entrar</a>
+                <a class="btn btn-primary" href="transferir.html">Descarregar</a>
+                <button class="nav-toggle" id="navToggle" aria-label="Abrir menu"><span></span></button>
+            </div>
+        </div>
+    </header>
+
+    <!-- ============ HERO ============ -->
+    <section class="hero">
+        <div class="container hero-grid">
+            <div class="hero-content">
+                <span class="eyebrow"><span class="dot"></span> App de sustentabilidade e criatividade</span>
+                <h1 class="display">Dá vida nova ao que já não usas.</h1>
+                <p class="lead">
+                    A <strong>Green Community</strong> transforma materiais reciclados em ideias incríveis.
+                    Descobre projetos, partilha as tuas criações e aprende a reciclar — tudo numa só app.
+                </p>
+
+                <div class="hero-actions">
+                    <a class="btn btn-primary btn-lg" href="transferir.html">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12"/><path d="m7 10 5 5 5-5"/><path d="M5 21h14"/></svg>
+                        Descarregar a app
+                    </a>
+                    <a class="btn btn-ghost btn-lg" href="#como">Ver como funciona</a>
+                </div>
+
+                <div class="hero-note">
+                    <div class="avatars"><span></span><span></span><span></span><span></span></div>
+                    <span>Já usada por mais de <strong>50 000</strong> criadores em Portugal</span>
+                </div>
+
+                <div class="hero-stats">
+                    <div class="stat"><b>50k+</b><span>Downloads</span></div>
+                    <div class="stat"><b>12k</b><span>Projetos partilhados</span></div>
+                    <div class="stat"><b>300+</b><span>Escolas</span></div>
+                </div>
+            </div>
+
+            <!-- mockup da app -->
+            <div class="phone-wrap">
+                <div class="phone">
+                    <div class="phone-notch"></div>
+                    <div class="phone-screen">
+                        <div class="app-top">
+                            <div class="app-brand"><span class="app-logo"></span> Green Community</div>
+                            <span class="app-avatar"></span>
+                        </div>
+
+                        <div class="app-card">
+                            <div class="app-row">
+                                <span class="app-avatar sm"></span>
+                                <div><b>@marta.verde</b><span>ha 2 horas</span></div>
+                            </div>
+                            <div class="app-media"></div>
+                            <div class="app-text">Porta-chaves feito com rolhas recicladas!</div>
+                            <div class="app-actions"><span>Gosto 128</span><span>Coment. 14</span></div>
+                        </div>
+
+                        <div class="app-card">
+                            <div class="app-row">
+                                <span class="app-avatar sm a2"></span>
+                                <div><b>@eco.rita</b><span>ha 5 horas</span></div>
+                            </div>
+                            <div class="app-media alt"></div>
+                            <div class="app-text">Vaso autoirrigável com garrafa PET. Tutorial completo na app.</div>
+                            <div class="app-actions"><span>Gosto 342</span><span>Coment. 27</span></div>
+                        </div>
+
+                        <div class="app-nav">
+                            <span class="active"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/></svg></span>
+                            <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5v14M5 12h14"/></svg></span>
+                            <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg></span>
+                            <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============ LOGOS ============ -->
+    <div class="logos">
+        <div class="container logos-inner">
+            <span>ESCOLAS</span>
+            <span>ASSOCIACOES</span>
+            <span>MUNICIPIOS</span>
+            <span>ESCOUTEIROS</span>
+            <span>UNIVERSIDADES</span>
+        </div>
+    </div>
+
+    <!-- ============ FUNCIONALIDADES ============ -->
+    <section class="section" id="funcionalidades">
+        <div class="container">
+            <div class="section-head reveal">
+                <span class="eyebrow"><span class="dot"></span> Funcionalidades</span>
+                <h2 class="h2">Tudo o que precisas para criar de forma sustentável</h2>
+                <p class="lead">Uma comunidade completa que une criatividade, aprendizagem e consciência ambiental.</p>
+            </div>
+
+            <div class="features-grid">
+                <article class="feature-card reveal">
+                    <div class="icon-badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"/><circle cx="12" cy="13" r="4"/></svg></div>
+                    <h3>Publica as tuas criacoes</h3>
+                    <p>Tira uma foto ao teu projeto, escreve uma descricao e partilha com a comunidade em segundos.</p>
+                </article>
+
+                <article class="feature-card reveal">
+                    <div class="icon-badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></svg></div>
+                    <h3>Comunidade ativa</h3>
+                    <p>Segue outros criadores, troca ideias e recebe reacoes e likes em cada projeto que publicas.</p>
+                </article>
+
+                <article class="feature-card reveal">
+                    <div class="icon-badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg></div>
+                    <h3>Feita para aprender</h3>
+                    <p>Guias passo a passo pensados para a escola: os mais novos aprendem reciclagem a criar.</p>
+                </article>
+
+                <article class="feature-card reveal">
+                    <div class="icon-badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v4M12 18v4M4.9 4.9l2.8 2.8M16.3 16.3l2.8 2.8M2 12h4M18 12h4M4.9 19.1l2.8-2.8M16.3 7.7l2.8-2.8"/></svg></div>
+                    <h3>Ideias inteligentes</h3>
+                    <p>Uma galeria cheia de inspiracao para transformar o que ia para o lixo em algo com valor.</p>
+                </article>
+
+                <article class="feature-card reveal">
+                    <div class="icon-badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.73 21a2 2 0 0 1-3.46 0"/></svg></div>
+                    <h3>Perfil personalizado</h3>
+                    <p>Foto, nivel e historico de projetos num perfil que cresce contigo enquanto crias.</p>
+                </article>
+
+                <article class="feature-card reveal">
+                    <div class="icon-badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div>
+                    <h3>100% segura</h3>
+                    <p>Contas protegidas, moderacao da comunidade e um ambiente pensado para todas as idades.</p>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============ COMO FUNCIONA ============ -->
+    <section class="section-sm" id="como">
+        <div class="container">
+            <div class="section-head reveal">
+                <span class="eyebrow"><span class="dot"></span> Como funciona</span>
+                <h2 class="h2">Do objeto esquecido a ideia partilhada em 3 passos</h2>
+            </div>
+
+            <div class="steps">
+                <div class="step reveal">
+                    <div class="step-num">1</div>
+                    <h3>Descarrega a app</h3>
+                    <p>Cria a tua conta gratuita em menos de um minuto e entra na comunidade Green.</p>
+                </div>
+                <div class="step reveal">
+                    <div class="step-num">2</div>
+                    <h3>Cria e publica</h3>
+                    <p>Escolhe um projeto, usa materiais reciclados e publica o resultado com uma foto.</p>
+                </div>
+                <div class="step reveal">
+                    <div class="step-num">3</div>
+                    <h3>Partilha e inspira</h3>
+                    <p>Recebe gostos, comentarios e inspira outras pessoas a criar de forma sustentavel.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============ SHOWCASE ============ -->
+    <section class="section showcase">
+        <div class="container showcase-grid">
+            <div class="reveal">
+                <span class="eyebrow"><span class="dot"></span> A app em detalhe</span>
+                <h2 class="h2">Uma experiencia simples, bonita e sustentavel</h2>
+                <p class="muted-dark">Interface pensada para ser rapida e agradavel — do feed principal ao teu perfil, tudo a um toque.</p>
+
+                <ul class="feature-list">
+                    <li>
+                        <span class="check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span>
+                        <div><b>Feed em tempo real</b><p>Ves imediatamente os projetos novos e mais gostados da comunidade.</p></div>
+                    </li>
+                    <li>
+                        <span class="check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span>
+                        <div><b>Pesquisa de criadores</b><p>Encontra utilizadores e inspira-te em quem partilha os mesmos interesses.</p></div>
+                    </li>
+                    <li>
+                        <span class="check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span>
+                        <div><b>Gostos e interacao</b><p>Cada projeto pode ser gostado e comentado pela comunidade.</p></div>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="phone-wrap reveal">
+                <div class="phone">
+                    <div class="phone-notch"></div>
+                    <div class="phone-screen">
+                        <div class="app-top">
+                            <div class="app-brand"><span class="app-logo"></span> Novo projeto</div>
+                            <span class="app-avatar a3"></span>
+                        </div>
+                        <div class="app-card">
+                            <div class="app-row">
+                                <span class="app-avatar sm a2"></span>
+                                <div><b>@tiago.cria</b><span>agora</span></div>
+                            </div>
+                            <div class="app-media"></div>
+                            <div class="app-text">Lampada feita com lata de conserva reciclada.</div>
+                            <div class="app-actions"><span>Gosto 89</span><span>Coment. 6</span></div>
+                        </div>
+                        <div class="app-card">
+                            <div class="app-row">
+                                <span class="app-avatar sm a3"></span>
+                                <div><b>@ana.ecologica</b><span>ha 1 hora</span></div>
+                            </div>
+                            <div class="app-media alt"></div>
+                            <div class="app-text">Estojo escolar feito com cartao reutilizado.</div>
+                            <div class="app-actions"><span>Gosto 210</span><span>Coment. 19</span></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============ STATS ============ -->
+    <section class="section-sm">
+        <div class="container stats-band">
+            <div class="stat reveal"><b>50k+</b><span>Downloads</span></div>
+            <div class="stat reveal"><b>12k</b><span>Projetos partilhados</span></div>
+            <div class="stat reveal"><b>300+</b><span>Escolas parceiras</span></div>
+            <div class="stat reveal"><b>4.9/5</b><span>Avaliacao media</span></div>
+        </div>
+    </section>
+
+    <!-- ============ CTA ============ -->
+    <section class="section-sm">
+        <div class="container">
+            <div class="cta-band reveal">
+                <h2 class="h2">Pronto para criar algo novo?</h2>
+                <p class="lead">Descarrega a Green Community e junta-te a milhares de pessoas que transformam reciclagem em criatividade.</p>
+                <div class="cta-actions">
+                    <a class="btn btn-light btn-lg" href="transferir.html">Descarregar a app</a>
+                    <a class="btn btn-dark btn-lg" href="contacto.html">Falar connosco</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============ FOOTER ============ -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div>
+                    <a class="brand" href="index.html">
+                        <span class="brand-mark">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10Z"/><path d="M2 21c0-3 1.85-5.36 5.08-6"/></svg>
+                        </span>
+                        <span>Green<b>Community</b></span>
+                    </a>
+                    <p>A app que transforma materiais reciclados em ideias incriveis. Cria, partilha e aprende a reciclar.</p>
+                    <div class="socials">
+                        <a href="#" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></svg></a>
+                        <a href="#" aria-label="Facebook"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg></a>
+                        <a href="#" aria-label="YouTube"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="5" width="20" height="14" rx="4"/><path d="m10 9 5 3-5 3z" fill="currentColor" stroke="none"/></svg></a>
+                    </div>
+                </div>
+
+                <div class="footer-col">
+                    <h4>App</h4>
+                    <a href="index.html#funcionalidades">Funcionalidades</a>
+                    <a href="transferir.html">Download</a>
+                </div>
+
+                <div class="footer-col">
+                    <h4>Empresa</h4>
+                    <a href="sobre.html">Sobre</a>
+                    <a href="contacto.html">Contacto</a>
+                    <a href="#entrar">Entrar</a>
+                </div>
+
+                <div class="footer-col">
+                    <h4>Legal</h4>
+                    <a href="#">Termos</a>
+                    <a href="#">Privacidade</a>
+                    <a href="#">Cookies</a>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <span>&copy; <span data-year>2026</span> Green Community. Projeto PAP.</span>
+                <span>Feito com materiais reciclados (e muito codigo).</span>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/scripts.js"></script>
+</body>
+</html>
